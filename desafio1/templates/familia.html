@@ -7,10 +7,19 @@
     <title>Familiares</title>
 </head>
 <body>
-    <h1>Mi familia</h1>
+    <h1>Mi familia: </h1>
+    <ul>
+        {% for parent in parents %}
 
-    <p>	familiares: {{relationship}}: {{name}} {{lastname}}.</p>
-    <p> edad: {{age}} </p>
-    <p>fecha de consulta: {{date}}</p>
+        <li> {{parent.type}}: {{parent.name}} {{parent.last_name}} <br>
+            Nacido: {{parent.birth}} <br>
+            Edad: {{parent.age}} <br>
+            Registro creado: {{parent.created}}
+        </li>
+        <br>
+
+        {% endfor %}
+    </ul>
+    
 </body>
 </html>

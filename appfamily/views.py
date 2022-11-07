@@ -4,3 +4,5 @@ from appfamily.models import Parents
 
 def family_list(request):
      parents = Parents.objects.all()
+     
+     return render(request, "familia.html", {"parents":parents})

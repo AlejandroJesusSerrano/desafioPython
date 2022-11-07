@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from desafio1.views import *
+from appfamily.views import family_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', template_view),
-    path('family/', view_family_index),
+    path('family/', family_list),
 ]

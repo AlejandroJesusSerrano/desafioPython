@@ -8,5 +8,6 @@ class Parents(models.Model):
      name = models.CharField(max_length=60)
      last_name = models.CharField(max_length=60)
      age = models.IntegerField()
-     birth = models.DateField()
+     birth = models.CharField(max_length=10)
+     created = models.DateField(auto_now_add=True)
 
